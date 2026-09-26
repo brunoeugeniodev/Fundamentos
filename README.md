@@ -1,44 +1,59 @@
-# Meus fundamentos
+# Fundamentos de programação em C e C++
 
-Este repositorio guarda a base que eu construi durante aproximadamente um ano e meio estudando programacao.
+Portfólio de estudos sobre lógica, memória, estruturas de dados e algoritmos, desenvolvido ao longo de aproximadamente um ano e meio. A sequência apresenta a evolução de funções simples até um projeto de classificação de times.
 
-Na epoca eu tinha 21 anos e estava aprendendo principalmente C. Comecei com problemas simples de logica e fui avancando para vetores, ponteiros, memoria, strings e estruturas de dados. A organizacao segue essa ordem para mostrar o caminho, e nao apenas o resultado final.
+Comecei essa trajetória aos 21 anos, estudando principalmente C. Os exemplos em C++ ampliam esse aprendizado com métodos em `struct`, construtores e recursos da biblioteca padrão. Cada pasta explica o problema estudado, a implementação e seu estado atual.
 
-## Por onde comecar
+## Explore o portfólio
 
-Se voce estiver chegando agora, siga as pastas numeradas. Cada uma representa um degrau do estudo:
-
-| Etapa | Assunto | O que aparece |
+| Etapa | Conteúdo | Aplicação prática |
 | --- | --- | --- |
-| [01](01-fundamentos-da-programacao) | Fundamentos | Funcoes, calculos, condicoes e repeticoes |
-| [02](02-vetores-e-estruturas) | Vetores e estruturas | Vetores, `struct` e pequenos cadastros |
-| [03](03-ponteiros-e-strings) | Ponteiros e strings | Memoria dinamica e manipulacao de textos |
-| [04](04-listas-encadeadas) | Listas | Nos, insercoes, remocoes e percursos |
-| [05](05-pilhas-e-filas) | Pilhas e filas | Estruturas LIFO e FIFO |
-| [06](06-algoritmos-de-ordenacao) | Ordenacao | Bubble, insertion, selection, merge e quick sort |
-| [07](07-arvores) | Arvores | Pasta reservada para essa etapa |
-| [08](08-projetos-e-exercicios) | Projetos | Exercicios que juntam varios assuntos |
+| [01 · Fundamentos](01-fundamentos-da-programacao/README.md) | Funções, condições e laços | Decomposição de problemas numéricos |
+| [02 · Vetores e estruturas](02-vetores-e-estruturas/README.md) | Registros, vetores e ponteiros | Cadastros de clientes, funcionários e livros |
+| [03 · Ponteiros e strings](03-ponteiros-e-strings/README.md) | Memória dinâmica, arquivos e busca | Processamento de nomes |
+| [04 · Listas encadeadas](04-listas-encadeadas/README.md) | Nós, inserções e remoções | Coleção dinâmica de inteiros |
+| [05 · Pilhas e filas](05-pilhas-e-filas/README.md) | Políticas LIFO e FIFO | Inversão de uma fila usando uma pilha |
+| [06 · Ordenação](06-algoritmos-de-ordenacao/README.md) | Selection, merge e quick sort | Comparação de estratégias de ordenação |
+| [07 · Árvores](07-arvores/README.md) | Etapa reservada, ainda sem código | Continuidade planejada dos estudos |
+| [08 · Projetos](08-projetos-e-exercicios/README.md) | Arquivos, estatísticas e ordenação | Classificação de times com desempates |
 
-## O que eu estava aprendendo
+Para conhecer uma aplicação integrada, comece pelo [projeto de classificação](08-projetos-e-exercicios/README.md). Para acompanhar a evolução dos estudos, siga a numeração das pastas.
 
-- transformar um problema em passos menores;
-- usar funcoes para separar responsabilidades;
-- guardar conjuntos de dados com vetores e estruturas;
-- entender enderecos, ponteiros e memoria dinamica;
-- implementar estruturas de dados sem depender de uma biblioteca pronta;
-- comparar formas diferentes de ordenar os mesmos dados;
-- perceber como uma ideia simples vai ficando mais complexa quando os dados crescem.
+## Competências trabalhadas
 
-## Sobre os arquivos
+- Decompor problemas em funções com responsabilidades específicas.
+- Modelar registros e percorrer coleções de dados.
+- Manipular endereços, alocar memória e encadear nós.
+- Implementar listas, pilhas e filas.
+- Explorar busca binária, ordenação e divisão e conquista.
+- Transformar resultados de partidas em estatísticas e uma classificação.
 
-Este nao e um repositorio de solucoes perfeitas. Alguns programas sao primeiras tentativas, alguns podem ser melhorados e outros foram feitos com uma forma de pensar que eu ainda estava desenvolvendo. Isso faz parte do registro.
+## Como executar
 
-A maior parte do material e C. Alguns exercicios usam recursos de C++, como metodos dentro de `struct`, construtores, `new` e `delete`. Eu mantive essa mistura porque ela tambem faz parte da maneira como aprendi estruturas de dados.
+Cada arquivo contém um programa independente com seu próprio `main`. Compile um arquivo por vez. Os comandos usam GCC para C e G++ para C++, disponíveis no `PATH`, e execução pelo PowerShell no Windows.
 
-## Como estudar este repositorio
+Na raiz do repositório:
 
-Uma boa forma de usar o material e escolher uma pasta, ler os arquivos na ordem e tentar explicar cada funcao antes de executar. Depois, vale testar entradas diferentes e reescrever os exercicios com outra abordagem.
+```powershell
+gcc -std=c99 -Wall -Wextra 01-fundamentos-da-programacao/funcao10.c -o soma-pares.exe
+./soma-pares.exe
+```
 
-Os arquivos sao programas independentes. Para compilar um arquivo em C, use um compilador C; para arquivos `.cpp`, use um compilador C++. Os nomes dos arquivos indicam o assunto, mas a historia de cada exercicio esta na sequencia das pastas.
+Informe `2 10`: a soma dos pares do intervalo é `30`.
 
-Este repositorio representa o ponto de partida que eu construi para continuar estudando programacao.
+```powershell
+g++ -std=c++11 -Wall -Wextra 05-pilhas-e-filas/pilha-e-fila.cpp -o pilha-fila.exe
+./pilha-fila.exe
+```
+
+O segundo exemplo imprime os números de `11` a `1`. Em Linux ou macOS, com GCC/G++ disponíveis, os mesmos comandos podem ser usados; a extensão `.exe` é apenas parte do nome escolhido.
+
+As etapas 03, 06 e 08 exigem arquivos de entrada. Seus READMEs explicam a preparação e os formatos.
+
+## Estado do material
+
+Este é um registro de formação, com implementações didáticas em diferentes estágios de maturidade. Há exercícios com erros de compilação ou comportamentos que precisam de revisão; os READMEs locais identificam os principais pontos encontrados na leitura do código.
+
+Os arquivos de nomes e de partidas não estão incluídos. A pasta de árvores ainda não contém implementações. Não há suíte automatizada de testes ou processo único de build.
+
+Os exemplos documentados servem como roteiro de verificação manual. Funcionalidades existentes e propostas de evolução são apresentadas separadamente para tornar o portfólio claro e fiel ao código.
